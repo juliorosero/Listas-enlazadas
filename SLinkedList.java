@@ -8,25 +8,29 @@ public class SLinkedList
 	head = null;
 	size= 0; 
 	}
+	
+	
 	 public boolean estaVacia(){
 		 
 		 return head==null;	 
 	 }
 
-	 public void insertaralInicio(String a){
+	 public void insertarAlInicio(String a){
+		 
 		 if (estaVacia()) 
 			  head= new Node(a);
 		 else 
 			  head = new Node(a,head); 
 	 }
 	 
-	 public void insertarFinal(String a){
+	 public void insertarAlFinal(String a){
 
 	     Node aux = new Node(a);
 	     Node inicio;
 
 	     if (estaVacia()) {
-	         insertaralInicio(a);
+	         insertarAlInicio(a);
+	         
 	     }else {
 	         inicio = head;         
 	         while(inicio.getNext() != null){
@@ -35,6 +39,7 @@ public class SLinkedList
 	         inicio.setNext(aux);
 	     }
 	 }
+	 
 	 
 	 public  void vaciar(){
 		  head=null;
