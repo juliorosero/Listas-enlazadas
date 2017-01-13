@@ -4,25 +4,20 @@ public class SLinkedList
 	protected long size;
 	
 	
-	public void SLinkedlist() 
-	{
+	public void SLinkedlist() {
 	head = null;
 	size= 0; 
-
 	}
 	 public boolean estaVacia(){
 		 
-		 return head==null;
-		 
+		 return head==null;	 
 	 }
 
 	 public void insertaralInicio(String a){
 		 if (estaVacia()) 
 			  head= new Node(a);
 		 else 
-			  head = new Node(a,head);
-		 
-		 
+			  head = new Node(a,head); 
 	 }
 	 
 	 public void insertarFinal(String a){
@@ -45,8 +40,7 @@ public class SLinkedList
 		  head=null;
 	 }
 	 
-	 public int tamaño()
-	 {
+	 public int tamaño() {
 	     Node auxiliar;
 	     size=0;
 	     auxiliar = head;
@@ -60,14 +54,16 @@ public class SLinkedList
 
 	 }
 	 
+	 
 	public void localizar(int posicion){
 		 
 	     Node auxiliar= head;
 	     int contador=1;
 
 	     if(posicion<1 || posicion>=tamaño()){
-	         System.out.println("posicion no encontrada");
-	     }else{
+	         System.out.println("Posicion NO encontrada");
+	     }
+	     else{
 	         while(auxiliar!=null){
 	             if (posicion == contador){
 	                 System.out.println("el elemento es : "+auxiliar.getElement()
@@ -82,6 +78,8 @@ public class SLinkedList
 	         }
 	     }
 	 }
+	
+	
 	 public void eliminarpos(int posicion){
 		 
 	     Node auxiliar= head;
@@ -90,16 +88,19 @@ public class SLinkedList
 
 	     if(posicion<1 || posicion>=tamaño()){
 	         System.out.println("posicion no encontrada");
-	     }else{
+	     }
+	     else{
 	         while(auxiliar!=null){
 	             if (posicion == contador){
 	                 if (anterior==null){
 	                     head = head.getNext();
-	                 }else {
+	                 }
+	                 else {
 	                     anterior.setNext(auxiliar.getNext());
 	                 }
 	                 auxiliar=null;
-	             }else{
+	             }
+	             else{
 	                 anterior=auxiliar;
 	                 auxiliar=auxiliar.getNext();
 	                 contador++;
@@ -108,11 +109,11 @@ public class SLinkedList
 	     }
 	 }
 	 
-	 public void imprimirLista(){
-	     System.out.println("La lista es:  ");
 	 
-	     
+	 public void imprimirLista(){
+	     System.out.println("La lista es:  "); 
 	     Node aux= head;
+	     
 	     
 	     while(aux!=null){
 	         System.out.println(aux.getElement());
