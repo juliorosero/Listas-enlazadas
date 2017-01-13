@@ -40,6 +40,7 @@ public class SLinkedList
 		  head=null;
 	 }
 	 
+	 
 	 public int tamaño() {
 	     Node auxiliar;
 	     size=0;
@@ -55,7 +56,7 @@ public class SLinkedList
 	 }
 	 
 	 
-	public void localizar(int posicion){
+	public void buscar(int posicion){
 		 
 	     Node auxiliar= head;
 	     int contador=1;
