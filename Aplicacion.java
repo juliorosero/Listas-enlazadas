@@ -6,7 +6,7 @@
 		SLinkedList libro = new SLinkedList(); 
 		
 		 if (libro.estaVacia())
-			 System.out.println("Lista sin llenar");
+			 System.out.println("Lista SIN llenar");
 		 
 		 libro.insertarFinal("El Anticristo");
 		 libro.insertarFinal("Las venas abiertas de America Latina");
@@ -22,10 +22,13 @@
 		 
 		 libro.eliminarpos(3);
 		 
+		 
 		 libro.imprimirLista();
 		 System.out.println("\nLa lista de libros esta compuesta de :  "+libro.tamaño()+" y los libros son:");
 		 
+		 
 		 libro.localizar(3);
+		 
 		 
 		 libro.vaciar();
 		 
