@@ -22,7 +22,7 @@ public class SLinkedList
 	 
 	 public void insertarFinal(String a){
 
-	     Node auxiliar = new Node(a);
+	     Node aux = new Node(a);
 	     Node inicio;
 
 	     if (estaVacia()) {
@@ -32,7 +32,7 @@ public class SLinkedList
 	         while(inicio.getNext() != null){
 	             inicio=inicio.getNext();
 	         }              
-	         inicio.setNext(auxiliar);
+	         inicio.setNext(aux);
 	     }
 	 }
 	 
@@ -42,14 +42,14 @@ public class SLinkedList
 	 
 	 
 	 public int tamaño() {
-	     Node auxiliar;
+	     Node aux;
 	     size=0;
-	     auxiliar = head;
+	     aux = head;
 
-	     while(auxiliar != null)
+	     while(aux != null)
 	     {
 	         size++;
-	         auxiliar = auxiliar.getNext();
+	         aux = aux.getNext();
 	     }
 	     return (int) size;
 
@@ -58,23 +58,23 @@ public class SLinkedList
 	 
 	public void buscar(int posicion){
 		 
-	     Node auxiliar= head;
-	     int contador=1;
+	     Node aux= head;
+	     int cont=1;
 
 	     if(posicion<1 || posicion>=tamaño()){
 	         System.out.println("Posicion NO encontrada");
 	     }
+	     
 	     else{
-	         while(auxiliar!=null){
-	             if (posicion == contador){
-	                 System.out.println("el elemento es : "+auxiliar.getElement()
-	                 					+": en la posicion "+ posicion);
-	                 auxiliar=null;
+	         while(aux!=null){
+	             if (posicion ==  cont){
+	                 System.out.println("el elemento es : "+aux.getElement()  +": en la posicion "+ posicion);
+	                 aux=null;
 	                 }
 	                 
 	             else{                 
-	                 auxiliar=auxiliar.getNext();
-	                 contador++;
+	                 aux=aux.getNext();
+	                 cont++;
 	             }
 	         }
 	     }
@@ -83,28 +83,28 @@ public class SLinkedList
 	
 	 public void eliminarpos(int posicion){
 		 
-	     Node auxiliar= head;
+	     Node aux= head;
 	     Node anterior=null;
-	     int contador=1;
+	     int cont=1;
 
 	     if(posicion<1 || posicion>=tamaño()){
 	         System.out.println("posicion no encontrada");
 	     }
 	     else{
-	         while(auxiliar!=null){
-	             if (posicion == contador){
+	         while(aux!=null){
+	             if (posicion == cont){
 	                 if (anterior==null){
 	                     head = head.getNext();
 	                 }
 	                 else {
-	                     anterior.setNext(auxiliar.getNext());
+	                     anterior.setNext(aux.getNext());
 	                 }
-	                 auxiliar=null;
+	                 aux=null;
 	             }
 	             else{
-	                 anterior=auxiliar;
-	                 auxiliar=auxiliar.getNext();
-	                 contador++;
+	                 anterior=aux;
+	                 aux=aux.getNext();
+	                 cont++;
 	             }
 	         }
 	     }

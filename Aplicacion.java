@@ -21,16 +21,19 @@ class Aplicacion {
 		 
 		 	libro.imprimirLista();
 		 	System.out.println("\nLa lista de libros esta compuesta de :  "+libro.tamaño());
+		 	
+		 	
+		 	int busc=Integer.parseInt(JOptionPane.showInputDialog("Ingrese libro a buscar"));
+		 	System.out.println("\nLa lista de libros esta compuesta de :  "+libro.tamaño()+" y los libros son:");
+		 	libro.buscar(busc);
+		 	
 		 
 		 	int eli=Integer.parseInt(JOptionPane.showInputDialog("Ingrese libro a eliminar"));
 		 	libro.eliminarpos(eli);	 
 		 
 		 	libro.imprimirLista();
 		 	
-		 	int busc=Integer.parseInt(JOptionPane.showInputDialog("Ingrese libro a buscar"));
-		 	System.out.println("\nLa lista de libros esta compuesta de :  "+libro.tamaño()+" y los libros son:");
-		 	libro.buscar(busc);
-		 
+		 		 
 		 
 		 	libro.vaciar();
 		 
